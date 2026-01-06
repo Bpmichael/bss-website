@@ -1,0 +1,26 @@
+-- Create DB and tables
+CREATE DATABASE IF NOT EXISTS bss_database;
+USE bss_database;
+
+CREATE TABLE IF NOT EXISTS applications (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  first_name VARCHAR(100) NOT NULL,
+  middle_name VARCHAR(100) NULL,
+  last_name VARCHAR(100) NOT NULL,
+  service VARCHAR(120) NOT NULL,
+  email VARCHAR(180) NOT NULL,
+  phone VARCHAR(60) NOT NULL,
+  address TEXT NULL,
+  postcode VARCHAR(20) NULL,
+  consent TINYINT(1) NOT NULL DEFAULT 1,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS student_tracking (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  application_id INT NOT NULL,
+  status VARCHAR(60) NOT NULL DEFAULT 'New',
+  notes TEXT NULL,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  CONSTRAINT fk_tracking_app FOREIGN KEY (application_id) REFERENCES applications(id) ON DELETE CASCADE
+);
