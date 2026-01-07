@@ -16,10 +16,7 @@ function RequireAdmin({ children }) {
   if (!token) return <Navigate to="/admin" replace />;
   return children;
 }
-<nav>
-  <img src="/images/logo.png" alt="Bright Service Solution Logo" style={{ height: "50px" }} />
-  <span>Bright Service Solution</span>
-</nav>
+http://localhost:5173/
 
 
 export default function App() {
