@@ -16,7 +16,7 @@ function RequireAdmin({ children }) {
   if (!token) return <Navigate to="/admin" replace />;
   return children;
 }
-http://localhost:5173/
+//http://localhost:5173/
 
 
 export default function App() {
@@ -37,7 +37,7 @@ export default function App() {
               <Dashboard />
             </RequireAdmin>
           }
-        />
+        
       </Routes>
     </Layout>
   );
