@@ -37,7 +37,7 @@ export default function App() {
               <Dashboard />
             </RequireAdmin>
           }
-        
+        />
       </Routes>
     </Layout>
   );
