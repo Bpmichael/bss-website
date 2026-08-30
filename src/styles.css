@@ -31,7 +31,7 @@ body {
     ),
     url("/images/bss\ logo.jpeg") no-repeat center center fixed;
   background-size: contain;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   scroll-behavior: smooth;
 }
 
@@ -45,10 +45,20 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
   max-width: 1200px;
   width: min(90%, 1200px);
   margin: 0 auto;
+}
+
+.img-card {
+  border-radius: 2em;
+  filter: drop-shadow(5px 5px 0 white);
+  padding: 1em;
 }
 
 .section {
@@ -123,12 +133,12 @@ a {
   top: 126%;
   right: 28px;
   z-index: 50;
+  transform: translateY(-180%);
   transition: transform 0.3s ease-in-out;
-  transform: translateX(150%);
 }
 
 .nav-right.active {
-  transform: translateX(0);
+  transform: translate(0%);
 }
 
 .nav-links {
@@ -169,6 +179,66 @@ a {
 .hamburger-menu img {
   width: 24px;
   height: 24px;
+}
+
+/* Hero Section */
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hero-text,
+.hero-img {
+  width: 450px;
+}
+
+.hero {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url("/images/hero_img.webp") no-repeat center center fixed;
+  background-size: auto;
+  min-height: 50dvh;
+  text-align: center;
+}
+
+.brand-name {
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+
+.brand-name span {
+  color: var(--secondary-color);
+}
+
+.hero-title {
+  font-weight: bold;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.hero-subtitle {
+  color: #001f4e;
+}
+
+.hero-img {
+  display: none;
+}
+
+.hero-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 2em;
+  width: 100%;
+}
+
+.hero-icons a {
+  filter: drop-shadow(5px 5px #ccc);
 }
 
 .footer {
@@ -222,4 +292,17 @@ a {
   .backdrop {
     display: none;
   }
+
+  /* Hero Section */
+  .hero {
+    background: none;
+    text-align: left;
+  }
+  .hero-icons {
+    justify-content: left;
+  }
+
+  /* .hero-img {
+    display: block;
+  } */
 }
