@@ -1,43 +1,108 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 import { useI18n } from "../lib/i18n.jsx";
 
 export default function Layout({ children }) {
   const { t, lang, setLanguage } = useI18n();
 
+  function toggleMenu() {
+    const backDrop = document.getElementById("backdrop");
+    const navLinks = document.getElementById("navlinks");
+
+    backDrop.classList.toggle("active");
+    navLinks.classList.toggle("active");
+  }
+
+  function hideBackDrop() {
+    const backDrop = document.getElementById("backdrop");
+    const navLinks = document.getElementById("navlinks");
+
+    backDrop.classList.remove("active");
+    navLinks?.classList.remove("active");
+  }
+
   return (
     <>
       <div className="nav">
-        <div className="nav-inner">
+        <div className="nav-inner container">
           <div className="brand">
-            <img src="/images/logo-bss.svg" alt="BSS Logo" />
+            <img src="/images/logo.webp" alt="BSS Logo" />
             <div>
               <div>Bright Service Solution</div>
               <small className="help">{t("tagline")}</small>
             </div>
           </div>
 
-          <div style={{ display: "flex", alignItems: "center", gap: 14, flexWrap: "wrap" }}>
+          <div id="navlinks" className="nav-right">
             <div className="nav-links">
-              <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>{t("nav.home")}</NavLink>
-              <NavLink to="/services" className={({ isActive }) => (isActive ? "active" : "")}>{t("nav.services")}</NavLink>
-              <NavLink to="/apply" className={({ isActive }) => (isActive ? "active" : "")}>{t("nav.apply")}</NavLink>
-              <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>{t("nav.contact")}</NavLink>
-              <NavLink to="/admin" className={({ isActive }) => (isActive ? "active" : "")}>{t("nav.admin")}</NavLink>
+              <NavHashLink
+                onClick={hideBackDrop}
+                smooth
+                to="/#Home"
+                className={{}}
+              >
+                {t("nav.home")}
+              </NavHashLink>
+              <NavHashLink
+                onClick={hideBackDrop}
+                smooth
+                to="/#Admission"
+                className={{}}
+              >
+                {t("school.admission")}
+              </NavHashLink>
+              <NavHashLink
+                onClick={hideBackDrop}
+                smooth
+                to="/#JobCenter"
+                className={{}}
+              >
+                {t("job.center")}
+              </NavHashLink>
+              <NavHashLink
+                onClick={hideBackDrop}
+                smooth
+                to="/#Internship"
+                className={{}}
+              >
+                {t("internship")}
+              </NavHashLink>
+              <NavHashLink
+                onClick={hideBackDrop}
+                smooth
+                to="About"
+                className={{}}
+              >
+                {t("about")}
+              </NavHashLink>
             </div>
-
             <div className="lang">
               <span style={{ fontWeight: 800 }}>🌐</span>
-              <select value={lang} onChange={(e) => setLanguage(e.target.value)}>
+              <select
+                value={lang}
+                onChange={(e) => setLanguage(e.target.value)}
+              >
                 <option value="en">EN</option>
                 <option value="fr">FR</option>
               </select>
             </div>
           </div>
+
+          <div onClick={toggleMenu} className="hamburger-menu">
+            <img
+              src="images/hamburger-menu.svg"
+              alt=""
+              width={24}
+              height={24}
+            />
+          </div>
         </div>
       </div>
 
-      <main className="container">{children}</main>
+      <div onClick={toggleMenu} id="backdrop" className="backdrop"></div>
+
+      <main>{children}</main>
 
       <a
         className="whatsapp"
@@ -49,7 +114,8 @@ export default function Layout({ children }) {
       </a>
 
       <div className="container footer">
-        © {new Date().getFullYear()} Bright Service Solution (BSS). All rights reserved.
+        © {new Date().getFullYear()} Bright Service Solution (BSS). All rights
+        reserved.
       </div>
     </>
   );
