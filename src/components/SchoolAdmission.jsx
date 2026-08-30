@@ -8,6 +8,12 @@ export default function SchoolAdmission() {
     <section id="Admission" className="section">
       <h2 className="section-title">{t("school.admission")}</h2>
       <h3 className="section-subtitle">{t("school.admission")}</h3>
+      <section className="container">
+        <section className="section-text"></section>
+        <section className="section-img">
+          <img className="img-card" src="/images/school_building.webp" alt="" />
+        </section>
+      </section>
     </section>
   );
 }

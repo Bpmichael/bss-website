@@ -1,5 +1,6 @@
 import React from "react";
 import { useI18n } from "../lib/i18n.jsx";
+import ImageCarousel from "./ImageCarousel.jsx";
 
 export default function Hero() {
   const { t, lang, setLanguage } = useI18n();
@@ -30,6 +31,13 @@ export default function Hero() {
           <section className="hero-img">
             <img className="img-card" src="images/hero_img.webp" alt="" />
           </section>
+        </section>
+
+        {/* Carousel */}
+        <section className="carousel">
+          <h2 className="section-title">{t("partners")}</h2>
+          <p className="text">{t("partners.text")}</p>
+          <ImageCarousel />
         </section>
       </section>
     </section>
