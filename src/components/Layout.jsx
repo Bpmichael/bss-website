@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 import { useI18n } from "../lib/i18n.jsx";
+import Footer from "./Footer.jsx";
 
 export default function Layout({ children }) {
   const { t, lang, setLanguage } = useI18n();
@@ -71,7 +72,7 @@ export default function Layout({ children }) {
               <NavHashLink
                 onClick={hideBackDrop}
                 smooth
-                to="About"
+                to="#About"
                 className={{}}
               >
                 {t("about")}
@@ -113,10 +114,7 @@ export default function Layout({ children }) {
         WhatsApp
       </a>
 
-      <div className="container footer">
-        © {new Date().getFullYear()} Bright Service Solution (BSS). All rights
-        reserved.
-      </div>
+      <Footer />
     </>
   );
 }
