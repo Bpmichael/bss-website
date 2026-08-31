@@ -111,7 +111,7 @@ export default function Layout({ children }) {
         target="_blank"
         rel="noreferrer"
       >
-        WhatsApp
+        <img src="/images/whatsapp.svg" width={24} height={24} alt="" />
       </a>
 
       <Footer />
