@@ -1,5 +1,6 @@
 import React from "react";
 import { useI18n } from "../lib/i18n.jsx";
+import Contact from "./Contact.jsx";
 
 export default function About() {
   const { t, lang, setLanguage } = useI18n();
@@ -55,6 +56,8 @@ export default function About() {
           </div>
         </section>
       </section>
+
+      <Contact />
     </section>
   );
 }

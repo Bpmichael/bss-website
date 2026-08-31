@@ -329,6 +329,14 @@ ul {
   filter: drop-shadow(5px 5px #ccc);
 }
 
+.contact-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 250px;
+  padding: 1em;
+  margin: auto;
+}
+
 .carousel {
   margin-top: 2em;
 }
@@ -376,7 +384,16 @@ ul {
 
   .flex {
     flex-direction: row;
-    align-items: center;
+    align-items: top;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 1.2em;
+  }
+
+  ul li {
+    font-size: 1.2rem;
   }
 
   .reverse {
@@ -431,12 +448,22 @@ ul {
   .hero {
     background: none;
     text-align: left;
+    padding-top: 23dvh;
   }
+
+  .brand-name {
+    font-size: 5rem;
+  }
+
   .hero-icons {
     justify-content: left;
   }
 
-  /* .hero-img {
+  .carousel {
+    margin-top: 42dvh;
+  }
+
+  .hero-img {
     display: block;
-  } */
+  }
 }
