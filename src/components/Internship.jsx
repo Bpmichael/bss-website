@@ -12,16 +12,20 @@ export default function Internship() {
         <section className="flex card">
           <section className="section-text">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-              dolore odit ea id, aut fugit quibusdam accusantium, quo pariatur,
-              vitae delectus. Commodi, repellat ab architecto eum vero veritatis
-              quasi fugit.
+              Gaining practical experience in your field is one of the most
+              effective ways to stand out to future employers. Our Internship
+              Support section connects international students with meaningful
+              internship opportunities across key industries in the UK, helping
+              you apply your classroom learning to real-world business
+              challenges.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-              dolore odit ea id, aut fugit quibusdam accusantium, quo pariatur,
-              vitae delectus. Commodi, repellat ab architecto eum vero veritatis
-              quasi fugit.
+              We walk you through every step of securing an internship from
+              identifying relevant placements and navigating application
+              deadlines to structuring your profile to match employer
+              expectations. Gain valuable international workplace experience,
+              build professional networks, and boost your post-graduation
+              employment prospects with our dedicated support.
             </p>
             <a href="#" className="btn btn-cta">
               {t("cta.apply")}

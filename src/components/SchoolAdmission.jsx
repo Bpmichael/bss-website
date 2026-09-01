@@ -12,16 +12,18 @@ export default function SchoolAdmission() {
         <section className="flex card">
           <section className="section-text">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-              dolore odit ea id, aut fugit quibusdam accusantium, quo pariatur,
-              vitae delectus. Commodi, repellat ab architecto eum vero veritatis
-              quasi fugit.
+              Navigating university admissions in a foreign country can be
+              complex, but you don't have to do it alone. At BSS, we offer 100%
+              free expert guidance to help international students secure
+              admission into top UK universities, including Ulster University,
+              Coventry University, University of Birmingham, Birmingham College,
+              and University of Wolverhampton.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-              dolore odit ea id, aut fugit quibusdam accusantium, quo pariatur,
-              vitae delectus. Commodi, repellat ab architecto eum vero veritatis
-              quasi fugit.
+              From selecting the right course and preparing your document
+              checklist to submitting your application, our experienced team
+              ensures your journey to studying abroad is seamless, efficient,
+              and successful.
             </p>
             <a href="#" className="btn btn-cta">
               {t("cta.apply")}

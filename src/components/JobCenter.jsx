@@ -12,16 +12,19 @@ export default function JobCenter() {
         <section className="flex reverse card">
           <section className="section-text">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-              dolore odit ea id, aut fugit quibusdam accusantium, quo pariatur,
-              vitae delectus. Commodi, repellat ab architecto eum vero veritatis
-              quasi fugit.
+              Navigating the UK job market as an international student can feel
+              overwhelming, but our Job Center is here to bridge the gap between
+              academic study and professional success. We provide practical
+              guidance to help you find part-time roles, internships, and
+              graduate positions that align with your field of study and visa
+              allowances.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-              dolore odit ea id, aut fugit quibusdam accusantium, quo pariatur,
-              vitae delectus. Commodi, repellat ab architecto eum vero veritatis
-              quasi fugit.
+              From tailoring your CV for UK employers and polishing your
+              LinkedIn profile to preparing for behavioral interviews, we equip
+              you with the essential tools to stand out. Our goal is to empower
+              you to build valuable work experience and launch a rewarding
+              career during and after your studies.
             </p>
             <a href="#" className="btn btn-cta">
               {t("cta.apply")}

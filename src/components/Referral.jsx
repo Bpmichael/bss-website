@@ -12,20 +12,33 @@ export default function Referral() {
         <section className="flex reverse card">
           <section className="section-text">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-              dolore odit ea id, aut fugit quibusdam accusantium, quo pariatur,
-              vitae delectus. Commodi, repellat ab architecto eum vero veritatis
-              quasi fugit.
+              Partner with BSS and earn rewards while helping others succeed!
+              Whether you are an individual recommending a prospective student
+              or an organization interested in an official partnership, our
+              Referral Program offers an easy way to generate income. Simply
+              introduce students or organizations to our university admission
+              and support services, and earn a commission for every successful
+              registration or partnership.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-              dolore odit ea id, aut fugit quibusdam accusantium, quo pariatur,
-              vitae delectus. Commodi, repellat ab architecto eum vero veritatis
-              quasi fugit.
+              Getting started is simple just chat us up directly on the platform
+              to submit your referral details or discuss partnership
+              opportunities. Our team will guide you through the quick
+              onboarding process, track your referrals, and ensure prompt
+              payouts. Turn your network into value today by connecting
+              ambitious students with top-tier UK education.
             </p>
-            <a href="#" className="btn btn-cta">
-              Refer Now
-            </a>
+            <div className="hero-icons">
+              <a href="https://wa.me/+447350160962">
+                <img src="/images/whatsapp.svg" width={26} height={26} alt="" />
+              </a>
+              <a href="#">
+                <img src="/images/gmail.svg" width={26} height={26} alt="" />
+              </a>
+              <a href="#">
+                <img src="/images/facebook.svg" width={26} height={26} alt="" />
+              </a>
+            </div>
           </section>
           <section className="section-img">
             <img
